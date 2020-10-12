@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Fake.Core.Target</name></assembly>
+<members>
+<member name="T:Fake.Core.BuildFailedException">
+<summary>
+ Exception for request errors
+</summary>
+</member>
+<member name="T:Fake.Core.Target">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="T:Fake.Core.TargetDescription">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="T:Fake.Core.TargetModule.OptionalTargetContext">
+<summary>
+ Optional `TargetContext`
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runOrList">
+<summary>
+ Runs the target given by the target parameter or lists the available targets
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runOrDefaultWithArguments(System.String)">
+<summary>
+ Runs the command given on the command line or the given target when no target is given
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runOrDefault(System.String)">
+<summary>
+ Runs the command given on the command line or the given target when no target is given
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.run(System.Int32,System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Runs a target and its dependencies
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.getArguments">
+<summary>
+ allows to retrieve the arguments passed into the current execution, 
+ when `Target.run*withArguments` overloads are used, see https://fake.build/core-targets.html#Targets-with-arguments
+ This function should be used at the start of your fake script
+ Alternatively, you can use Target.initEnvironment() instead,
+ Note: This function usually returns `Some [||]`, it will return `None` when 
+ No actual execution was requested (for example because of `--list`),
+ you shouldn&apos;t execute any side effects when `None` is returned 
+ (you should never execute side effects but you can use this flag to check if needed)
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.initEnvironment">
+<summary>
+ allows to initialize the environment before defining targets
+ This function should be used at the start of your fake script
+ see https://github.com/fsharp/FAKE/issues/2283
+ Alternatively, you can use Target.getArguments() instead
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.initAndProcess``1(Microsoft.FSharp.Core.FSharpFunc{Fake.Core.TargetModule.ArgResults,``0})">
+<summary>
+ allows to initialize FAKE, see initEnvironment and getArguments
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.privGetArgResults">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.removeArgResults">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.setArgResults">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.argResultsVar">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runAndGetContext(System.Int32,System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Runs a target and its dependencies and returns a `TargetContext`
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.raiseIfError(Fake.Core.TargetModule.OptionalTargetContext)">
+<summary>
+ If `TargetContext option` is Some and has error, raise it as a BuildFailedException
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.updateBuildStatus(Fake.Core.TargetModule.OptionalTargetContext)">
+<summary>
+ Updates build status based on `OptionalTargetContext`
+ Will not update status if `OptionalTargetContext` is `MaybeSet` with value `None`
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.deactivateFinal(System.String)">
+<summary>
+ deactivates the final target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.activateFinal(System.String)">
+<summary>
+ Activates the final target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.createFinal(System.String,Microsoft.FSharp.Core.FSharpFunc{Fake.Core.TargetParameter,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Creates a final target (not activated).
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.deactivateBuildFailure(System.String)">
+<summary>
+ Deactivates the build failure target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.activateBuildFailure(System.String)">
+<summary>
+ Activates the build failure target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.createBuildFailure(System.String,Microsoft.FSharp.Core.FSharpFunc{Fake.Core.TargetParameter,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Creates a target in case of build failure (not activated).
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runInternal(System.Boolean,System.Int32,System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Runs a target and its dependencies.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runSingleTarget(Fake.Core.Target,Fake.Core.TargetContext)">
+<summary>
+ Runs a single target without its dependencies... only when no error has been detected yet.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.determineBuildOrder(System.String)">
+<summary>
+ Determines a parallel build order for the given set of targets
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.writeTaskTimeSummary``1(``0,Fake.Core.TargetContext)">
+ <summary>Writes a build time report.</summary>
+ <param name="total">The total runtime.</param>
+</member>
+<member name="M:Fake.Core.TargetModule.printDependencyGraph(System.Boolean,System.String)">
+ <summary>Writes a dependency graph.</summary>
+ <param name="verbose">Whether to print verbose output or not.</param>
+ <param name="target">The target for which the dependencies should be printed.</param>
+</member>
+<member name="M:Fake.Core.TargetModule.writeInfoFile(System.String)">
+<summary>
+ List all targets available.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.listAvailable">
+<summary>
+ List all targets available.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runBuildFailureTargets(Fake.Core.TargetContext)">
+<summary>
+ Runs all build failure targets.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runFinalTargets(Fake.Core.TargetContext)">
+<summary>
+ Runs all activated final targets (in alphabetically order).
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.create(System.String,Microsoft.FSharp.Core.FSharpFunc{Fake.Core.TargetParameter,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Creates a Target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.addTargetWithDependencies(Microsoft.FSharp.Collections.FSharpList{Fake.Core.Dependency},Microsoft.FSharp.Core.FSharpFunc{Fake.Core.TargetParameter,Microsoft.FSharp.Core.Unit},System.String)">
+<summary>
+ add a target with dependencies
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.addTarget(Fake.Core.InternalTarget,System.String)">
+<summary>
+ Creates a target from template.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.op_LessEqualsEquals(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Backwards dependencies operator - x is dependent on ys.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.SoftDependencies(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Adds the dependencies to the list of soft dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.Dependencies(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Adds the dependencies to the list of dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.softDependency(System.String,System.String)">
+<summary>
+ Adds the dependency to the list of soft dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.dependency(System.String,System.String)">
+<summary>
+ Adds the dependency to the list of dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.softDependencyAtFront(System.String,System.String)">
+<summary>
+ Appends the dependency to the list of soft dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.dependencyAtFront(System.String,System.String)">
+<summary>
+ Adds the dependency to the front of the list of dependencies.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.checkIfSoftDependencyCanBeAdded(System.String,System.String)">
+<summary>
+ Checks whether the soft dependency can be added.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.checkIfDependencyCanBeAdded(System.String,System.String)">
+<summary>
+ Checks whether the dependency can be added.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.checkIfDependencyCanBeAddedCore(Microsoft.FSharp.Core.FSharpFunc{Fake.Core.InternalTarget,Microsoft.FSharp.Collections.FSharpList{Fake.Core.Dependency}},System.String,System.String)">
+<summary>
+ Checks whether the dependency (soft or normal) can be added.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.DoNothing(Fake.Core.TargetParameter)">
+<summary>
+ Do nothing - Can be used to define empty targets.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.softDependencyString(Fake.Core.InternalTarget)">
+<summary>
+ Returns the soft  DependencyString for the given target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runSimpleWithContext(System.String,Fake.Core.TargetContext)">
+<summary>
+ This simply runs the function of a target without doing anything (like tracing, stopwatching or adding it to the results at the end)
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.runSimple(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ This simply runs the function of a target without doing anything (like tracing, stopwatching or adding it to the results at the end)
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.dependencyString(Fake.Core.Target)">
+<summary>
+ Returns the DependencyString for the given target.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.getInternal(System.String)">
+<summary>
+ Gets a target with the given name from the target dictionary.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.getAllTargetsNames">
+<summary>
+ Returns a list with all target names.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.reset">
+<summary>
+ Resets the state so that a deployment can be invoked multiple times
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.getBuildFailureTargets">
+<summary>
+ BuildFailureTargets - stores build failure targets and if they are activated.
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.getFinalTargets">
+<summary>
+ Final Targets - stores final targets and if they are activated.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.getVarWithInit``1(System.String,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0})">
+<summary>
+ TargetDictionary
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.Description(System.String)">
+<summary>
+ Sets the Description for the next target.
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.description(System.String)">
+<summary>
+ Sets the Description for the next target.
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.collectStackVar">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.lastDescriptionVar">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="P:Fake.Core.TargetModule.printStackTraceOnErrorVar">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.WithContext.runOrList">
+<summary>
+ Runs the target given by the target parameter or lists the available targets &amp; get context
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.WithContext.runOrDefaultWithArguments(System.String)">
+<summary>
+ Runs the command given on the command line or the given target when no target is given &amp; get context
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.WithContext.runOrDefault(System.String)">
+<summary>
+ Runs the command given on the command line or the given target when no target is given &amp; get context
+</summary>
+</member>
+<member name="M:Fake.Core.TargetModule.WithContext.run(System.Int32,System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Runs a target and its dependencies and returns an `OptionalTargetContext`
+</summary>
+</member>
+<member name="T:Fake.Core.TargetModule.WithContext">
+<summary>
+ Run functions which don&apos;t throw and return the context after all targets have been executed.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_EqualsQmarkGreater(System.String,System.String,System.Boolean)">
+<summary>
+ Defines a conditional dependency - y is dependent on x if the condition is true
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_LessEqualsGreater(System.String,System.String)">
+<summary>
+ Defines that x and y are not dependent on each other but y is dependent on all dependencies of x.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_LessEqualsQmark(System.String,System.String)">
+<summary>
+ Defines a soft dependency. x must run before y, if it is present, but y does not require x to be run.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_QmarkEqualsGreater(System.String,System.String)">
+<summary>
+ Defines a soft dependency. x must run before y, if it is present, but y does not require x to be run.
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_EqualsEqualsGreater(System.String,System.String)">
+<summary>
+ Defines a dependency - y is dependent on x
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.addSoftDependenciesOnSameLevel(System.String,System.String)">
+<summary>
+ Specifies that two targets have the same dependencies
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.addDependenciesOnSameLevel(System.String,System.String)">
+<summary>
+ Specifies that two targets have the same dependencies
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.targetsAreOnSameLevel(System.String,System.String)">
+<summary>
+ Specifies that two targets are on the same level of execution
+</summary>
+</member>
+<member name="P:Fake.Core.TargetOperators.sameLevels">
+<summary>
+ Stores which targets are on the same level
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_DynamicAssignment``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},``0,``1)">
+<summary>
+ Allows to use Tokens instead of strings for TargetNames
+</summary>
+</member>
+<member name="M:Fake.Core.TargetOperators.op_Dynamic``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0)">
+<summary>
+ Allows to use Tokens instead of strings
+</summary>
+</member>
+<member name="T:Fake.Core.TargetOperators">
+<summary>
+ Provides functions and operators to deal with FAKE targets and target dependencies.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,8 @@
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/bin/Debug/net5.0/myLib.deps.json
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/bin/Debug/net5.0/myLib.dll
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/bin/Debug/net5.0/myLib.pdb
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/obj/Debug/net5.0/myLib.fsprojAssemblyReference.cache
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/obj/Debug/net5.0/myLib.AssemblyInfoInputs.cache
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/obj/Debug/net5.0/myLib.AssemblyInfo.fs
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/obj/Debug/net5.0/myLib.dll
+/Users/gaohongpeng/Desktop/mydemo/src/Lib/obj/Debug/net5.0/myLib.pdb

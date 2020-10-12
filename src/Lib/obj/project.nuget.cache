@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2GM1m9zdS0G0ZcLGA943laXd0dUvpgUv4A5cYb9lOG+aqLzJww2kQiQF3yrLj0xooGsfLHw54m2HvDXIrYlRFw==",
+  "success": true,
+  "projectFilePath": "/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/myLib.fsproj",
+  "expectedPackageFiles": [
+    "/Users/gaohongpeng/.nuget/packages/fsharp.core/5.0.0-beta.20509.1/fsharp.core.5.0.0-beta.20509.1.nupkg.sha512"
+  ],
+  "logs": []
+}
