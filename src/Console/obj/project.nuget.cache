@@ -4,7 +4,7 @@
   "success": true,
   "projectFilePath": "/Users/gaohongpeng/Desktop/temp/MSBuild/src/Console/Console.fsproj",
   "expectedPackageFiles": [
-    "/Users/gaohongpeng/.nuget/packages/fsharp.core/5.0.0-beta.20509.1/fsharp.core.5.0.0-beta.20509.1.nupkg.sha512"
+    "/Users/gaohongpeng/.nuget/packages/fsharp.core/5.0.0-beta.20512.2/fsharp.core.5.0.0-beta.20512.2.nupkg.sha512"
   ],
   "logs": []
 }

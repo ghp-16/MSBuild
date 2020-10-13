@@ -16,6 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/Users/gaohongpeng/.nuget/packages/fsharp.core/5.0.0-beta.20509.1</PkgFSharp_Core>
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/Users/gaohongpeng/.nuget/packages/fsharp.core/5.0.0-beta.20512.2</PkgFSharp_Core>
   </PropertyGroup>
 </Project>

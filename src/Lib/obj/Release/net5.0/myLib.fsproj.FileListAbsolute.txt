@@ -1,0 +1,8 @@
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/bin/Release/net5.0/myLib.deps.json
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/bin/Release/net5.0/myLib.dll
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/bin/Release/net5.0/myLib.pdb
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/obj/Release/net5.0/myLib.fsprojAssemblyReference.cache
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/obj/Release/net5.0/myLib.AssemblyInfoInputs.cache
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/obj/Release/net5.0/myLib.AssemblyInfo.fs
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/obj/Release/net5.0/myLib.dll
+/Users/gaohongpeng/Desktop/temp/MSBuild/src/Lib/obj/Release/net5.0/myLib.pdb
